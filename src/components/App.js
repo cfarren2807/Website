@@ -22,6 +22,7 @@ function Home() {
       <Gallery />
       <Team />
       <Contact />
+    <Footer/>
     
     </>
   );
