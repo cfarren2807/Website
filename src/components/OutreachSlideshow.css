@@ -1,0 +1,123 @@
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* 60% of the viewport height (adjustable) */
+    overflow: hidden;
+  }
+  
+  /* Image style */
+  .slide {
+    width: 100%; /* Adjust width of the image */
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Start with opacity 0 (hidden) */
+    transition: opacity 1s ease-in-out; /* Smooth fade */
+  }
+  
+  /* Active image */
+  .slide.active {
+    opacity: 1; /* Active image should be visible */
+  }
+  
+  /* Text container */
+  .text-container {
+    position: absolute;
+    bottom: 20px; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%; /* You can adjust this to fit your design */
+    z-index: 10;
+  }
+  
+  /* Arrow Styling */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  
+  /* Dots for Navigation */
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #00aaff;
+  }
+  
+  /* For Larger Screens (Desktop View) */
+  @media (min-width: 768px) {
+    .slideshow-container {
+      height: 70vh; /* Increased height for desktop view (you can adjust this) */
+    }
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* Mobile screens */
+  @media (max-width: 600px) {
+    .slideshow-container {
+      height: 40vh;
+    }
+  
+    .slide {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .text-container {
+      width: 100%;
+      font-size: 1em; /* Adjust text size for mobile */
+    }
+  }
+  
+  /* Tablet screens */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .slideshow-container {
+      height: 45vh;
+    }
+  
+    .slide {
+      width: 70%;
+      height: 100%;
+    }
+  
+    .text-container {
+      width: 30%;
+      font-size: 1.3em; /* Adjust text size for tablets */
+    }
+  }
+  
+  

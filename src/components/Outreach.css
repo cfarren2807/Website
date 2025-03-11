@@ -1,0 +1,113 @@
+.article-grid {
+  padding: 50px;
+  background: #000;
+  color: white;
+}
+
+/* Grid Layout */
+.article-container {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr; /* Large, Medium, Small */
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
+/* Large Article */
+.article-card.large {
+  grid-row: span 2; /* Takes up both rows */
+  position: relative;
+}
+
+/* Medium Article */
+.article-card.medium {
+  position: relative;
+}
+
+/* Small Articles */
+.article-card.small {
+  position: relative;
+}
+
+/* Ensure images fill their containers */
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Text Overlay */
+.article-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 15px;
+  color: white;
+}
+
+.article-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.article-time {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Circular Articles */
+.circular-articles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.circular-article {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+}
+
+.circular-article img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.circular-article .text {
+  font-size: 0.9rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .article-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .article-card.large {
+    grid-row: auto;
+  }
+
+  .circular-articles {
+    flex-direction: column;
+    align-items: center;
+  }
+}

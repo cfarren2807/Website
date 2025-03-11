@@ -1,0 +1,200 @@
+
+
+
+
+
+
+/* Hero Section */
+section {
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #005b96; /* CubeSat brand color */
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero img {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+/* Mission Section */
+#mission {
+  background-color: #e9f2f9;
+}
+
+#mission p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+
+/* Team Section */
+#team {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#team .team-member {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#team .team-member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+#team .team-member h3 {
+  font-size: 1.5rem;
+}
+
+#team .team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #team .team-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  section h2 {
+    font-size: 1.7rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+}
+/* Responsive CSS - App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/* Responsive Hero Section */
+
+.hero {
+  height: 100vh;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive Sections */
+section {
+  padding: 50px 10%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 30px 5%;
+  }
+}
+
+/* Responsive Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Responsive Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+}
